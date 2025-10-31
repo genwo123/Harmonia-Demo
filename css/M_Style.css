@@ -1,0 +1,265 @@
+/* 기본 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* 헤더 */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 56px;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 22px;
+    opacity: 0.95;
+    letter-spacing: 2px;
+}
+
+/* 메인 컨텐츠 */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    background: white;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+h2 {
+    color: #667eea;
+    margin-bottom: 25px;
+    font-size: 32px;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 15px;
+}
+
+h3 {
+    color: #555;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+h4 {
+    color: #667eea;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* 리스트 */
+ul, ol {
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+li {
+    margin-bottom: 12px;
+    line-height: 1.8;
+}
+
+/* 안내 박스 */
+.notice {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.notice p {
+    margin: 5px 0;
+    color: #856404;
+}
+
+/* 다운로드 버튼 */
+.download-button {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.download-button a {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 18px 50px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.download-button a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.download-button a.button-disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.download-button a.button-disabled:hover {
+    transform: none;
+}
+
+/* 시스템 요구사항 */
+.requirements {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.req-column {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+}
+
+.req-column h4 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #667eea;
+}
+
+.req-column ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+.req-column li {
+    padding: 8px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.req-column li:last-child {
+    border-bottom: none;
+}
+
+/* 문제 해결 섹션 */
+.troubleshooting {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 30px;
+    border-left: 4px solid #667eea;
+}
+
+.troubleshooting h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* 링크 */
+.links a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+.links a.link-disabled {
+    color: #999;
+    cursor: not-allowed;
+}
+
+.links a.link-disabled:hover {
+    text-decoration: none;
+}
+
+/* Contact 섹션 */
+.contact p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.contact a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* 푸터 */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 5px 0;
+    opacity: 0.9;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 36px;
+    }
+    
+    header p {
+        font-size: 16px;
+    }
+    
+    main {
+        padding: 10px;
+    }
+    
+    section {
+        padding: 25px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    .requirements {
+        grid-template-columns: 1fr;
+    }
+}
