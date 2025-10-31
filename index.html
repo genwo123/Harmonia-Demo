@@ -3,119 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamonia - Puzzle Adventure Game Demo</title>
+    <title>Hamonia - 1인칭 퍼즐 어드벤처 게임</title>
     <link rel="stylesheet" href="css/M_Style.css">
 </head>
 <body>
     <!-- 헤더 -->
     <header>
-        <h1>HAMONIA</h1>
-        <p>Puzzle Adventure Game</p>
+        <div class="header-content">
+            <h1>🎭 HAMONIA</h1>
+            <p class="subtitle">하모니아</p>
+            <p class="description">1인칭 퍼즐 어드벤처 게임</p>
+            <p class="project-info">숙명여자대학교 2025 졸업전시작</p>
+        </div>
     </header>
 
     <!-- 메인 컨텐츠 -->
     <main>
-        <!-- 게임 소개 -->
-        <section class="intro">
-            <h2>게임 소개</h2>
-            <p>1인칭 시점의 퍼즐 어드벤처 게임입니다.</p>
-            <p>레이저와 거울을 활용한 독특한 퍼즐을 풀며 미스터리한 이야기를 풀어나가세요.</p>
-            <p>숨겨진 노트를 수집하고, 키패드 암호를 풀며, 제한 시간 안에 퍼즐을 완성하세요.</p>
+        <!-- 프로모션 영상 -->
+        <section class="banner">
+            <h2>🎬 프로모션 영상</h2>
+            <p class="banner-description">이미지를 클릭하면 YouTube의 PV영상을 보실 수 있습니다</p>
+            <a href="https://youtu.be/rGCgl6xelgo?si=o7_9UaGb29jtHJu8" target="_blank" class="video-link">
+                <img src="images/Harmonia_PV.png" alt="하모니아 프로모션 영상">
+                <div class="play-overlay">
+                    <div class="play-button">▶</div>
+                </div>
+            </a>
         </section>
 
-        <!-- 주요 특징 -->
-        <section class="features">
-            <h2>주요 특징</h2>
-            <ul>
-                <li><strong>레이저/거울 퍼즐</strong> - 물리 기반 광학 퍼즐 메커니즘</li>
-                <li><strong>노트 시스템</strong> - 발견한 단서와 메모를 기록</li>
-                <li><strong>키패드 입력</strong> - 문자 기반 암호 해독 시스템</li>
-                <li><strong>다양한 스테이지</strong> - 10개 이상의 독특한 레벨</li>
-                <li><strong>타임 챌린지</strong> - 제한 시간 내 퍼즐 해결</li>
-                <li><strong>인벤토리 시스템</strong> - 아이템 수집 및 사용</li>
-            </ul>
+        <!-- 게임 소개 이미지 -->
+        <section class="intro-image-section">
+            <img src="images/Harmonia_Intro.jpg" alt="하모니아 게임 소개">
+        </section>
+
+        <!-- 프로젝트 정보 -->
+        <section class="project-info-section">
+            <h2>📋 프로젝트 정보</h2>
+            <div class="info-table">
+                <div class="info-row">
+                    <div class="info-label">장르</div>
+                    <div class="info-value">1인칭 퍼즐 어드벤처</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">플랫폼</div>
+                    <div class="info-value">PC (Windows)</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">엔진</div>
+                    <div class="info-value">Unreal Engine 5.6</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">개발 언어</div>
+                    <div class="info-value">C++17, Blueprint</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">개발 기간</div>
+                    <div class="info-value">2024.03 ~ 2024.11</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">개발 규모</div>
+                    <div class="info-value">6인 팀 프로젝트</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 개발팀 -->
+        <section class="team">
+            <h2>👥 개발팀</h2>
+            <div class="team-table">
+                <div class="team-row">
+                    <div class="team-role">🖥️ 프로그래밍</div>
+                    <div class="team-count">1명</div>
+                    <div class="team-names">김건우</div>
+                </div>
+                <div class="team-row">
+                    <div class="team-role">📝 게임 기획</div>
+                    <div class="team-count">1명</div>
+                    <div class="team-names">정영서</div>
+                </div>
+                <div class="team-row">
+                    <div class="team-role">🎨 아트</div>
+                    <div class="team-count">3명</div>
+                    <div class="team-names">류지원, 박지우, 박소율</div>
+                </div>
+                <div class="team-row">
+                    <div class="team-role">🎵 사운드</div>
+                    <div class="team-count">1명</div>
+                    <div class="team-names">박세이</div>
+                </div>
+            </div>
         </section>
 
         <!-- 다운로드 -->
         <section class="download">
-            <h2>데모 다운로드</h2>
-            
-            <div class="notice">
-                <p>⚠️ 현재 데모 버전을 준비 중입니다.</p>
-                <p>곧 다운로드 링크가 업데이트될 예정입니다!</p>
-            </div>
-
-            <!-- 나중에 링크 추가할 부분 -->
+            <h2>💾 데모 다운로드</h2>
             <div class="download-button">
-                <a href="#" class="button-disabled">
-                    Windows 다운로드 (준비 중)
+                <a href="#" class="button-primary">
+                    Windows 다운로드
                 </a>
             </div>
-
-            <h3>시스템 요구사항</h3>
-            <div class="requirements">
-                <div class="req-column">
-                    <h4>최소 사양</h4>
-                    <ul>
-                        <li><strong>OS:</strong> Windows 10 64-bit</li>
-                        <li><strong>CPU:</strong> Intel i5 / AMD Ryzen 5</li>
-                        <li><strong>RAM:</strong> 8GB</li>
-                        <li><strong>GPU:</strong> GTX 1060 / RX 580</li>
-                        <li><strong>저장공간:</strong> 6GB</li>
-                        <li><strong>DirectX:</strong> Version 11</li>
-                    </ul>
-                </div>
-                <div class="req-column">
-                    <h4>권장 사양</h4>
-                    <ul>
-                        <li><strong>OS:</strong> Windows 10/11 64-bit</li>
-                        <li><strong>CPU:</strong> Intel i7 / AMD Ryzen 7</li>
-                        <li><strong>RAM:</strong> 16GB</li>
-                        <li><strong>GPU:</strong> GTX 1080 / RX 5700</li>
-                        <li><strong>저장공간:</strong> 6GB</li>
-                        <li><strong>DirectX:</strong> Version 12</li>
-                    </ul>
-                </div>
-            </div>
-
-            <h3>설치 방법</h3>
-            <ol>
-                <li>ZIP 파일 다운로드</li>
-                <li>원하는 위치에 압축 해제</li>
-                <li>HamoniaDemo.exe 실행</li>
-            </ol>
-
-            <div class="troubleshooting">
-                <h4>문제 해결</h4>
-                <ul>
-                    <li>게임이 실행되지 않으면 DirectX 최신 버전을 설치하세요</li>
-                    <li>그래픽 드라이버를 최신으로 업데이트하세요</li>
-                    <li>바이러스 백신이 차단하는 경우 예외 처리하세요</li>
-                </ul>
-            </div>
+            <p class="download-note">* 다운로드 링크는 곧 업데이트 예정입니다</p>
         </section>
 
         <!-- 링크 -->
         <section class="links">
-            <h2>링크</h2>
+            <h2>🔗 링크</h2>
             <ul>
-                <li><a href="https://github.com/genwo123/Harmonia" target="_blank">GitHub 소스 코드</a></li>
-                <li><a href="#" class="link-disabled">itch.io 페이지 (준비 중)</a></li>
+                <li><a href="https://github.com/genwo123/Harmonia" target="_blank">📂 GitHub Repository</a></li>
+                <li><a href="https://youtu.be/rGCgl6xelgo?si=o7_9UaGb29jtHJu8" target="_blank">🎬 프로모션 영상</a></li>
             </ul>
-        </section>
-
-        <!-- Contact -->
-        <section class="contact">
-            <h2>Contact</h2>
-            <p><strong>개발자:</strong> genwo123</p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/genwo123" target="_blank">github.com/genwo123</a></p>
-            <p><strong>Email:</strong> your.email@example.com</p>
         </section>
     </main>
 
     <!-- 푸터 -->
     <footer>
-        <p>&copy; 2025 Hamonia. All rights reserved.</p>
+        <p>🎮 하모니아와 함께 퍼즐의 세계를 탐험해보세요! 🎮</p>
+        <p>&copy; 2025 Harmonia - 숙명여자대학교 졸업전시회 작품</p>
         <p>Made with Unreal Engine 5</p>
     </footer>
 </body>
