@@ -363,39 +363,3 @@ footer p {
     opacity: 0.9;
     font-size: 13px;
 }
-
-/* ==========================================
-   반응형 디자인
-========================================== */
-@media (max-width: 768px) {
-    .header-content h1 {
-        font-size: 28px;
-    }
-    
-    .top-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .grid-2x2 {
-        grid-template-columns: 1fr;
-    }
-    
-    .info-row {
-        grid-template-columns: 1fr;
-    }
-    
-    .info-label {
-        border-right: none;
-        border-bottom: 2px solid #e9ecef;
-    }
-    
-    .team-row {
-        grid-template-columns: 1fr;
-    }
-    
-    .team-role,
-    .team-count {
-        border-right: none;
-        border-bottom: 2px solid #e9ecef;
-    }
-}
