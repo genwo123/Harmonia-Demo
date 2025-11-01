@@ -2,7 +2,7 @@
    갤러리 섹션 (3개씩 페이지네이션)
 ========================================== */
 .gallery-section {
-    padding: 30px 15px;
+    padding: 40px 30px;  /* 30px에서 40px로 변경 */
 }
 
 .gallery-section h2 {

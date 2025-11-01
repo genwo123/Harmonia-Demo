@@ -2,7 +2,7 @@
    탭 섹션
 ========================================== */
 .tabs-section {
-    padding: 30px 15px;
+    padding: 40px 30px;  /* 20px에서 40px로 변경 */
 }
 
 .tabs-section h2 {
