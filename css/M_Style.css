@@ -1,4 +1,6 @@
-/* 기본 설정 */
+/* ==========================================
+   기본 설정
+========================================== */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +14,23 @@ body {
     background-color: #f4f4f4;
 }
 
-/* 헤더 */
+/* ==========================================
+   컨테이너
+========================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container-full {
+    width: 100%;
+    padding: 0;
+}
+
+/* ==========================================
+   헤더
+========================================== */
 header {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
@@ -46,22 +64,17 @@ header {
     opacity: 0.85;
 }
 
-/* 메인 컨텐츠 */
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
+/* ==========================================
+   섹션 공통 스타일
+========================================== */
 section {
     background: white;
-    padding: 40px;
     margin-bottom: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 15px rgba(0,0,0,0.08);
 }
 
-h2 {
+section h2 {
     color: #667eea;
     margin-bottom: 25px;
     font-size: 32px;
@@ -69,13 +82,22 @@ h2 {
     padding-bottom: 15px;
 }
 
-/* 프로모션 영상 배너 */
-.banner {
-    padding: 40px;
-    text-align: center;
+section h3 {
+    color: #555;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+/* ==========================================
+   배너/PV 섹션
+========================================== */
+.banner-section {
+    padding: 40px 20px;
 }
 
 .banner-description {
+    text-align: center;
     color: #666;
     font-style: italic;
     margin-bottom: 20px;
@@ -135,7 +157,9 @@ h2 {
     transform: scale(1.1);
 }
 
-/* 게임 소개 이미지 */
+/* ==========================================
+   게임 소개 이미지
+========================================== */
 .intro-image-section {
     padding: 0;
     overflow: hidden;
@@ -145,17 +169,22 @@ h2 {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 10px;
 }
 
-/* 게임 소개 */
+/* ==========================================
+   게임 소개 & 주요 특징
+========================================== */
+.intro,
+.features {
+    padding: 40px;
+}
+
 .intro p {
     margin-bottom: 15px;
     font-size: 16px;
     line-height: 1.8;
 }
 
-/* 주요 특징 */
 .features ul {
     list-style: none;
     margin-left: 0;
@@ -167,11 +196,45 @@ h2 {
     margin-bottom: 12px;
     border-radius: 8px;
     border-left: 4px solid #667eea;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .features li:hover {
     transform: translateX(5px);
+    box-shadow: 0 2px 10px rgba(102, 126, 234, 0.2);
+}
+
+/* ==========================================
+   2x2 그리드 섹션
+========================================== */
+.info-grid-section {
+    padding: 40px 20px;
+}
+
+.grid-2x2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.grid-item h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 /* 프로젝트 정보 테이블 */
@@ -183,7 +246,7 @@ h2 {
 
 .info-row {
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 150px 1fr;
     border-bottom: 1px solid #e9ecef;
 }
 
@@ -193,14 +256,14 @@ h2 {
 
 .info-label {
     background: #f8f9fa;
-    padding: 15px 20px;
+    padding: 12px 15px;
     font-weight: bold;
     color: #667eea;
     border-right: 2px solid #e9ecef;
 }
 
 .info-value {
-    padding: 15px 20px;
+    padding: 12px 15px;
     color: #333;
 }
 
@@ -213,7 +276,7 @@ h2 {
 
 .team-row {
     display: grid;
-    grid-template-columns: 200px 100px 1fr;
+    grid-template-columns: 150px 80px 1fr;
     border-bottom: 1px solid #e9ecef;
 }
 
@@ -223,7 +286,7 @@ h2 {
 
 .team-role {
     background: #f8f9fa;
-    padding: 15px 20px;
+    padding: 12px 15px;
     font-weight: bold;
     color: #667eea;
     border-right: 2px solid #e9ecef;
@@ -231,69 +294,80 @@ h2 {
 
 .team-count {
     background: #f8f9fa;
-    padding: 15px 20px;
+    padding: 12px 15px;
     text-align: center;
     color: #666;
     border-right: 2px solid #e9ecef;
 }
 
 .team-names {
-    padding: 15px 20px;
+    padding: 12px 15px;
     color: #333;
 }
 
-/* 안내 박스 */
-.notice {
-    background: #fff3cd;
-    border-left: 4px solid #ffc107;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 5px;
-}
-
-.notice p {
-    margin: 5px 0;
-    color: #856404;
-}
-
-/* 다운로드 버튼 */
-.download {
+/* 다운로드 & 설문조사 카드 */
+.download-card,
+.survey-card {
     text-align: center;
 }
 
-.download-button {
-    margin: 30px 0;
+.download-card p,
+.survey-card p {
+    margin-bottom: 20px;
+    color: #666;
 }
 
-.download-button a {
+.action-button {
     display: inline-block;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 18px 50px;
-    text-decoration: none;
+    padding: 15px 40px;
     border-radius: 50px;
-    font-size: 20px;
+    text-decoration: none;
+    font-size: 18px;
     font-weight: bold;
     transition: all 0.3s ease;
+    margin: 10px 0;
+}
+
+.download-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
-.download-button a:hover {
+.download-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
 }
 
-.download-button a.button-disabled {
-    background: #ccc;
-    cursor: not-allowed;
-    box-shadow: none;
+.survey-btn {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4);
 }
 
-.download-button a.button-disabled:hover {
-    transform: none;
+.survey-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(240, 147, 251, 0.6);
 }
 
-/* 링크 그리드 */
+.btn-icon {
+    margin-right: 8px;
+}
+
+.note {
+    font-size: 12px;
+    color: #999;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* ==========================================
+   링크 섹션
+========================================== */
+.links-section {
+    padding: 40px 20px;
+}
+
 .link-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -335,13 +409,15 @@ h2 {
     color: white;
 }
 
-/* 푸터 */
+/* ==========================================
+   푸터
+========================================== */
 footer {
     background: #2c3e50;
     color: white;
     text-align: center;
     padding: 30px 20px;
-    margin-top: 50px;
+    margin-top: 0;
 }
 
 footer p {
@@ -349,7 +425,9 @@ footer p {
     opacity: 0.9;
 }
 
-/* 반응형 디자인 */
+/* ==========================================
+   반응형 디자인
+========================================== */
 @media (max-width: 768px) {
     .header-content h1 {
         font-size: 36px;
@@ -359,18 +437,20 @@ footer p {
         font-size: 18px;
     }
     
-    main {
-        padding: 10px;
-    }
-    
     section {
-        padding: 25px;
+        padding: 25px 15px;
     }
     
-    h2 {
+    section h2 {
         font-size: 24px;
     }
     
+    /* 2x2 그리드 → 1열 */
+    .grid-2x2 {
+        grid-template-columns: 1fr;
+    }
+    
+    /* 테이블 반응형 */
     .info-row {
         grid-template-columns: 1fr;
     }
@@ -384,7 +464,8 @@ footer p {
         grid-template-columns: 1fr;
     }
     
-    .team-role, .team-count {
+    .team-role,
+    .team-count {
         border-right: none;
         border-bottom: 2px solid #e9ecef;
     }
