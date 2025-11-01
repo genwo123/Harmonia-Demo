@@ -74,6 +74,16 @@ header::before {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
+/* 로고 이미지 스타일 */
+.header-logo {
+    max-width: 600px;
+    width: 80%;
+    height: auto;
+    margin: 0 auto 10px;
+    display: block;
+    filter: drop-shadow(2px 2px 8px rgba(0,0,0,0.4));
+}
+
 .header-content .subtitle {
     font-size: 22px;
     margin-bottom: 8px;
