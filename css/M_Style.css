@@ -363,3 +363,35 @@ footer p {
     opacity: 0.9;
     font-size: 13px;
 }
+
+/* 설문조사 카드 레이아웃 */
+.survey-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.survey-qr {
+    text-align: center;
+}
+
+.survey-qr img {
+    width: 150px;
+    height: 150px;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.qr-text {
+    font-size: 11px;
+    color: #666;
+    margin-top: 6px;
+    font-weight: 500;
+}
+
+.survey-button-wrapper {
+    width: 100%;
+    text-align: center;
+}
