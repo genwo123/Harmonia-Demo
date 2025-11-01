@@ -7,12 +7,36 @@
     
     <!-- 파비콘 추가 -->
     <link rel="icon" type="image/png" href="images/Harmonia_Icon.png">
-    
+    <!-- 배경음악 -->
+    <audio id="bgm" loop>
+        <source src="sounds/MainMenu.wav" type="audio/wav">
+    </audio>
+
+    <!-- 음악 플레이어 (우측 상단 고정) -->
+    <div class="music-player">
+        <button id="music-toggle" class="music-btn">
+            <span class="music-icon">🔇</span>
+        </button>
+        <input type="range" id="volume-slider" class="volume-slider" min="0" max="100" value="50">
+        <span class="volume-text">50%</span>
+    </div>
+
+    <!-- 페이지 이동 버튼 (우측 하단 고정) -->
+    <div class="page-navigation">
+        <button id="scroll-top" class="nav-btn" title="맨 위로">
+            <span>▲</span>
+        </button>
+        <button id="scroll-bottom" class="nav-btn" title="맨 아래로">
+            <span>▼</span>
+        </button>
+    </div>    
     <!-- CSS 파일들 -->
     <link rel="stylesheet" href="css/M_Style.css">
     <link rel="stylesheet" href="css/tabs.css">
     <link rel="stylesheet" href="css/lightbox.css">
+
 </head>
+
 
 <!-- ========================================
      헤더
@@ -174,9 +198,18 @@
             <div class="grid-item survey-card">
                 <h2>설문조사</h2>
                 <p>게임에 대한 여러분의 의견을 들려주세요</p>
-                <a href="https://docs.google.com/forms/d/1GXn3p0qN6hlmpqcVOvkGOP5Y5oqJv4hRP3LxwHZAJOE/viewform?edit_requested=true" target="_blank" class="action-button survey-btn">
-                    <span class="btn-text">설문조사 참여하기</span>
-                </a>
+                
+                <div class="survey-content">
+                    <div class="survey-qr">
+                        <img src="images/Harmonia_Demosurvey.png" alt="설문조사 QR코드">
+                        <p class="qr-text">QR코드로 접속하기</p>
+                    </div>
+                    <div class="survey-button-wrapper">
+                        <a href="https://docs.google.com/forms/d/1GXn3p0qN6hlmpqcVOvkGOP5Y5oqJv4hRP3LxwHZAJOE/viewform?edit_requested=true" target="_blank" class="action-button survey-btn">
+                            <span class="btn-text">설문조사 참여하기</span>
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <!-- 프로젝트 정보 (왼쪽 하단) -->
@@ -298,6 +331,8 @@
 <!-- JavaScript 파일들 -->
 <script src="js/tabs.js"></script>
 <script src="js/slider.js"></script>
+<script src="js/music.js"></script>
+
 
 </body>
 </html>
