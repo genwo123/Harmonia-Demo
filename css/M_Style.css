@@ -11,9 +11,9 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
     color: #333;
-    background-color: #f4f4f4;
-    /* 배경 이미지 추가 (원하는 이미지로 교체) */
-    background-image: url('images/background.jpg');
+    background-color: #1a1a2e;
+    /* 배경 이미지 - 섹션 사이와 좌우에서 보임 */
+    background-image: url('../images/background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -38,7 +38,7 @@ body {
 ========================================== */
 header {
     /* 배경 이미지로 교체 */
-    background-image: url('images/header_banner.jpg');
+    background-image: url('../images/header_banner.jpg');
     background-size: cover;
     background-position: center;
     /* 그라데이션으로 하려면 위 3줄 삭제하고 아래 주석 해제 */
@@ -95,12 +95,13 @@ header::before {
 }
 
 /* ==========================================
-   섹션 공통 스타일 - 중앙 정렬 + 여백
+   섹션 공통 스타일 - 좌우 여백 추가로 배경 보이게
 ========================================== */
 section {
     background: rgba(255, 255, 255, 0.95);
     margin: 30px auto;
     max-width: 1200px;
+    width: calc(100% - 80px); /* 좌우 40px씩 여백 */
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     backdrop-filter: blur(10px);
@@ -423,6 +424,7 @@ footer {
     padding: 30px;
     margin: 30px auto 0;
     max-width: 1200px;
+    width: calc(100% - 80px); /* 좌우 40px씩 여백 */
     border-radius: 12px 12px 0 0;
     box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
 }
