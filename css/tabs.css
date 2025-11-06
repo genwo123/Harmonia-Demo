@@ -67,30 +67,26 @@
 }
 
 /* ==========================================
-   탭 슬라이더 - 16:9 비율 고정
+   탭 슬라이더 - 갤러리 스타일로 변경
 ========================================== */
 .tab-slider {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px 0;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 40px 0;
 }
 
 .slider-track {
-    width: 100%;
     display: flex;
+    gap: 20px;
     justify-content: center;
     align-items: center;
-    position: relative;
+    min-height: 500px;
 }
 
 .slider-item {
     width: 100%;
-    max-width: 1000px;
+    max-width: 900px; /* 갤러리보다 크게 */
     height: auto;
     aspect-ratio: 16/9;
     object-fit: contain;
@@ -104,14 +100,12 @@
     display: block;
 }
 
-.slider-item:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 30px rgba(0,0,0,0.2);
-}
-
 /* 슬라이더 버튼 */
 .slider-prev,
 .slider-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     background: rgba(102, 126, 234, 0.9);
     color: white;
     border: none;
@@ -119,21 +113,23 @@
     height: 50px;
     border-radius: 50%;
     font-size: 28px;
-    font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
+    z-index: 10;
+}
+
+.slider-prev {
+    left: 10px;
+}
+
+.slider-next {
+    right: 10px;
 }
 
 .slider-prev:hover,
 .slider-next:hover {
     background: rgba(118, 75, 162, 1);
-    transform: scale(1.1);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transform: translateY(-50%) scale(1.1);
 }
 
 .slider-prev:active,

@@ -4,9 +4,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    // ==========================================
-    // 1. 탭 이미지 슬라이더
-    // ==========================================
     const tabSliders = document.querySelectorAll('.tab-slider');
 
     tabSliders.forEach(slider => {
@@ -17,22 +14,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (!track || items.length === 0) return;
 
-        const itemWidth = 420; // 이미지 너비(400) + gap(20)
+        let currentIndex = 0;
+
+        // 첫 번째 이미지 활성화
+        items[0].classList.add('active');
+
+        // 이미지 1개면 버튼 숨기기
+        if (items.length <= 1) {
+            prevBtn.style.display = 'none';
+            nextBtn.style.display = 'none';
+        }
 
         // 이전 버튼
         prevBtn.addEventListener('click', () => {
-            track.scrollBy({
-                left: -itemWidth,
-                behavior: 'smooth'
-            });
+            items[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            items[currentIndex].classList.add('active');
         });
 
         // 다음 버튼
         nextBtn.addEventListener('click', () => {
-            track.scrollBy({
-                left: itemWidth,
-                behavior: 'smooth'
-            });
+            items[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % items.length;
+            items[currentIndex].classList.add('active');
         });
 
         // 이미지 클릭 시 라이트박스
