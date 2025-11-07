@@ -2,12 +2,12 @@
    탭 섹션
 ========================================== */
 .tabs-section {
-    padding: 40px 30px;  /* 20px에서 40px로 변경 */
+    padding: 40px 30px;
 }
 
 .tabs-section h2 {
     text-align: center;
-    color: #667eea;
+    color: #8B6F47;
     margin-bottom: 30px;
     font-size: 24px;
 }
@@ -25,28 +25,28 @@
 
 .tab-btn {
     background: white;
-    border: 2px solid #667eea;
+    border: 2px solid #8B6F47;
     padding: 12px 30px;
     border-radius: 50px;
     font-size: 16px;
     font-weight: 600;
-    color: #667eea;
+    color: #8B6F47;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .tab-btn:hover {
-    background: #667eea;
+    background: #8B6F47;
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 3px 10px rgba(139, 111, 71, 0.3);
 }
 
 .tab-btn.active {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #8B6F47 0%, #5C4033 100%);
     border-color: transparent;
     color: white;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.5);
+    box-shadow: 0 4px 15px rgba(139, 111, 71, 0.5);
 }
 
 /* ==========================================
@@ -86,7 +86,7 @@
 
 .slider-item {
     width: 100%;
-    max-width: 900px; /* 갤러리보다 크게 */
+    max-width: 900px;
     height: auto;
     aspect-ratio: 16/9;
     object-fit: contain;
@@ -106,7 +106,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(102, 126, 234, 0.9);
+    background: rgba(139, 111, 71, 0.9);
     color: white;
     border: none;
     width: 50px;
@@ -128,14 +128,15 @@
 
 .slider-prev:hover,
 .slider-next:hover {
-    background: rgba(118, 75, 162, 1);
+    background: rgba(92, 64, 51, 1);
     transform: translateY(-50%) scale(1.1);
 }
 
 .slider-prev:active,
 .slider-next:active {
-    transform: scale(0.95);
+    transform: translateY(-50%) scale(0.95);
 }
+
 /* ==========================================
    애니메이션
 ========================================== */
@@ -147,32 +148,5 @@
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-/* ==========================================
-   반응형
-========================================== */
-@media (max-width: 768px) {
-    .tab-menu {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    
-    .tab-btn {
-        width: 100%;
-        text-align: center;
-    }
-    
-    .slider-item {
-        width: 300px;
-        height: 375px;
-    }
-    
-    .slider-prev,
-    .slider-next {
-        width: 35px;
-        height: 35px;
-        font-size: 20px;
     }
 }
